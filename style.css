@@ -1,16 +1,91 @@
+/* General Body Styling */
 body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    background-color: antiquewhite;
+    background-color: #faf4ef;
     min-height: 100vh;
     align-items: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
 }
 
+/* Header Styling */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: bold;
+    color: #4a4a4a;
+    margin: 1rem 0;
+}
+
+/* Main Container Styling */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Board Styling */
 .board {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px;
     display: grid;
-    border-color: black;
+    aspect-ratio: 1 / 1; /* Ensures a square shape */
+    background-color: #ffffff;
+    border: 2px solid #4a4a4a;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Buttons Styling */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.buttons button,
+.buttons input[type="range"] {
+    width: 100%;
+    max-width: 200px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #4a4a4a;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.buttons button:hover,
+.buttons input[type="color"]:hover,
+.buttons input[type="range"]:hover {
+    background-color: #f0e6d2;
+    transform: scale(1.05);
+}
+
+.gridSize {
+    font-size: 1rem;
+    color: #4a4a4a;
+    margin-top: 0.5rem;
+}
+
+.footer {
+    margin-top: auto;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
