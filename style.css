@@ -25,12 +25,19 @@ body {
 /* Main Container Styling */
 .main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     width: 90%;
-    max-width: 800px;
+    max-width: 1000px;
+    flex-shrink: 1;
+    gap: 1rem;
 }
 
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column; /* Switch to column for smaller screens */
+    }
+}
 /* Board Styling */
 .board {
     width: 100%;
